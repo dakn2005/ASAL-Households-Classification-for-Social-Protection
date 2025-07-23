@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/50e650612f1c4c92a82d18294a3372f1/artifacts
+end_time: 1753288794353
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 50e650612f1c4c92a82d18294a3372f1
+run_name: upset-horse-209
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753288793825
+status: 3
+tags: []
+user_id: daudi

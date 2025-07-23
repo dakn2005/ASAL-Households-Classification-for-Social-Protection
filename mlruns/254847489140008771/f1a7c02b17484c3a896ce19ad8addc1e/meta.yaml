@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/f1a7c02b17484c3a896ce19ad8addc1e/artifacts
+end_time: 1753294634797
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: f1a7c02b17484c3a896ce19ad8addc1e
+run_name: unequaled-eel-84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753294634303
+status: 3
+tags: []
+user_id: daudi

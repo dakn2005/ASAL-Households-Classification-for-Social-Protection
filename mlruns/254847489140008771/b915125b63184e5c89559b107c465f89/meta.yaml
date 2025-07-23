@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/b915125b63184e5c89559b107c465f89/artifacts
+end_time: 1753286584489
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: b915125b63184e5c89559b107c465f89
+run_name: omniscient-frog-395
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753286583963
+status: 3
+tags: []
+user_id: daudi

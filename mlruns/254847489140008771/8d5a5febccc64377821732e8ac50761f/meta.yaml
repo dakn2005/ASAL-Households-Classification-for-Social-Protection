@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/8d5a5febccc64377821732e8ac50761f/artifacts
+end_time: 1753286954645
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 8d5a5febccc64377821732e8ac50761f
+run_name: rumbling-goose-893
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753286954433
+status: 3
+tags: []
+user_id: daudi

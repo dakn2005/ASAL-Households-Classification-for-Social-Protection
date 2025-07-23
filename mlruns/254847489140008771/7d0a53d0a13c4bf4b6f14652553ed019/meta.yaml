@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/7d0a53d0a13c4bf4b6f14652553ed019/artifacts
+end_time: 1753294190871
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 7d0a53d0a13c4bf4b6f14652553ed019
+run_name: gentle-finch-477
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753294190512
+status: 3
+tags: []
+user_id: daudi

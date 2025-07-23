@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/254847489140008771
+creation_time: 1753286582012
+experiment_id: '254847489140008771'
+last_update_time: 1753286582012
+lifecycle_stage: active
+name: xgboost-capstone

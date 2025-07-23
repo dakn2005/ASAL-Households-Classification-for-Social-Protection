@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/be055b5e0a754aa4b127bdfb7c2ffb3b/artifacts
+end_time: 1753290865403
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: be055b5e0a754aa4b127bdfb7c2ffb3b
+run_name: adaptable-bear-364
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753290865030
+status: 3
+tags: []
+user_id: daudi

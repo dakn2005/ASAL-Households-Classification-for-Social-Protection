@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/5b4d6c3f7174442cb5cd659f3b35b75b/artifacts
+end_time: 1753292669776
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 5b4d6c3f7174442cb5cd659f3b35b75b
+run_name: hilarious-wasp-335
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753292669482
+status: 3
+tags: []
+user_id: daudi
