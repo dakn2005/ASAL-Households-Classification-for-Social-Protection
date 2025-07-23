@@ -1,0 +1,7 @@
+.DS_Store
+data/hsnp-asal-nk-data.xlsx
+data/features_final.csv
+data/X_train.csv
+mlruns/
+.venv
+__pycache__
