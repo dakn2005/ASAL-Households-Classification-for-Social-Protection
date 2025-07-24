@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/777bb8f3a24743a3b49d453b0f444bf2/artifacts
+deleted_time: 1753358676660
+end_time: 1753358604518
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: deleted
+run_id: 777bb8f3a24743a3b49d453b0f444bf2
+run_name: rebellious-jay-496
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753358604077
+status: 3
+tags: []
+user_id: David.Njuguna

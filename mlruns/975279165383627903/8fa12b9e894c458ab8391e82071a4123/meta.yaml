@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/8fa12b9e894c458ab8391e82071a4123/artifacts
+end_time: 1753359082065
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 8fa12b9e894c458ab8391e82071a4123
+run_name: gaudy-shark-235
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359081825
+status: 3
+tags: []
+user_id: David.Njuguna

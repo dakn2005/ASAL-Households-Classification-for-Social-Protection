@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/f3a680b97c5f41e3be63f231a62ad7ac/artifacts
+end_time: 1753355397665
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: f3a680b97c5f41e3be63f231a62ad7ac
+run_name: secretive-slug-285
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753355397215
+status: 3
+tags: []
+user_id: David.Njuguna

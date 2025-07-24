@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/72944ddb342c46dabe7edf008c50bb52/artifacts
+deleted_time: 1753358971988
+end_time: 1753358801451
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: deleted
+run_id: 72944ddb342c46dabe7edf008c50bb52
+run_name: capricious-asp-215
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753358801158
+status: 3
+tags: []
+user_id: David.Njuguna

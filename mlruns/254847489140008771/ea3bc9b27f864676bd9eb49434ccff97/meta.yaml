@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/ea3bc9b27f864676bd9eb49434ccff97/artifacts
+end_time: 1753360628875
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: ea3bc9b27f864676bd9eb49434ccff97
+run_name: silent-kit-994
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753360628325
+status: 3
+tags: []
+user_id: David.Njuguna

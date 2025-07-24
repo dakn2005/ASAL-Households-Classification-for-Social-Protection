@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/49678f4fb8c442b08542a18a6535d97a/artifacts
+end_time: 1753359927501
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 49678f4fb8c442b08542a18a6535d97a
+run_name: agreeable-squid-669
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359927232
+status: 3
+tags: []
+user_id: David.Njuguna

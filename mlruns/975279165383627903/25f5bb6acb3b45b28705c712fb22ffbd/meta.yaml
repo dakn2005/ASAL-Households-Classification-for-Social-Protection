@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/25f5bb6acb3b45b28705c712fb22ffbd/artifacts
+end_time: 1753360511559
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 25f5bb6acb3b45b28705c712fb22ffbd
+run_name: sneaky-fly-734
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753360511236
+status: 3
+tags: []
+user_id: David.Njuguna

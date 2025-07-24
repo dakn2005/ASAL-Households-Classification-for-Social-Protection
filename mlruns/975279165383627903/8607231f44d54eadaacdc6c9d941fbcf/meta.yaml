@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/8607231f44d54eadaacdc6c9d941fbcf/artifacts
+end_time: 1753359480898
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 8607231f44d54eadaacdc6c9d941fbcf
+run_name: invincible-rat-138
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359480652
+status: 3
+tags: []
+user_id: David.Njuguna

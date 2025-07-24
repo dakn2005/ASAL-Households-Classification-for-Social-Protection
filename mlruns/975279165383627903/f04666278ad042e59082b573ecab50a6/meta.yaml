@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/f04666278ad042e59082b573ecab50a6/artifacts
+deleted_time: 1753358971983
+end_time: 1753358941250
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: deleted
+run_id: f04666278ad042e59082b573ecab50a6
+run_name: aged-eel-102
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753358940987
+status: 3
+tags: []
+user_id: David.Njuguna

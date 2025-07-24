@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/18aed8ba6ff4450586af7cbffe367702/artifacts
+end_time: 1753354221168
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 18aed8ba6ff4450586af7cbffe367702
+run_name: suave-snake-689
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753354220885
+status: 3
+tags: []
+user_id: David.Njuguna

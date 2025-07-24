@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/2cdda73ec408486c953943f4f9f6990a/artifacts
+end_time: 1753357041559
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 2cdda73ec408486c953943f4f9f6990a
+run_name: abrasive-asp-629
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753357041265
+status: 3
+tags: []
+user_id: David.Njuguna

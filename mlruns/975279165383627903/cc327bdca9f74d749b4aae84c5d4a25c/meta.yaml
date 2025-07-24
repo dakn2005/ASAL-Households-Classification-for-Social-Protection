@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/cc327bdca9f74d749b4aae84c5d4a25c/artifacts
+end_time: 1753359296395
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: cc327bdca9f74d749b4aae84c5d4a25c
+run_name: omniscient-jay-20
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359296010
+status: 3
+tags: []
+user_id: David.Njuguna

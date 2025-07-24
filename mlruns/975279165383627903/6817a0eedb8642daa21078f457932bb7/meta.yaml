@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/6817a0eedb8642daa21078f457932bb7/artifacts
+end_time: 1753359635225
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 6817a0eedb8642daa21078f457932bb7
+run_name: legendary-moose-867
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359635099
+status: 4
+tags: []
+user_id: David.Njuguna

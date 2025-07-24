@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/8d629e26b5954625b8db5d5667e94dda/artifacts
+end_time: 1753359717099
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 8d629e26b5954625b8db5d5667e94dda
+run_name: merciful-crab-161
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359716768
+status: 3
+tags: []
+user_id: David.Njuguna

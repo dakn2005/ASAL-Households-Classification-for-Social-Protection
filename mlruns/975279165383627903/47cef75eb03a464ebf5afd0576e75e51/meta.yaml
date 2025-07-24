@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/47cef75eb03a464ebf5afd0576e75e51/artifacts
+end_time: 1753360923994
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 47cef75eb03a464ebf5afd0576e75e51
+run_name: magnificent-doe-334
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753360923619
+status: 3
+tags: []
+user_id: David.Njuguna

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/d0642a1b136b45498d38e69e345f3363/artifacts
+end_time: 1753356836915
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: d0642a1b136b45498d38e69e345f3363
+run_name: learned-wren-476
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753356836679
+status: 3
+tags: []
+user_id: David.Njuguna

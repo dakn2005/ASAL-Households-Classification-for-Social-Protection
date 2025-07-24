@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/8231bed7d2d143469e6a0fca173260c3/artifacts
+end_time: 1753360992396
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 8231bed7d2d143469e6a0fca173260c3
+run_name: amusing-mouse-730
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753360991768
+status: 3
+tags: []
+user_id: David.Njuguna

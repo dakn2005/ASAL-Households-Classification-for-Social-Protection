@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/4f733f8720b9434185c5a43631c3371a/artifacts
+end_time: 1753359040176
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 4f733f8720b9434185c5a43631c3371a
+run_name: clumsy-swan-725
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359039934
+status: 3
+tags: []
+user_id: David.Njuguna

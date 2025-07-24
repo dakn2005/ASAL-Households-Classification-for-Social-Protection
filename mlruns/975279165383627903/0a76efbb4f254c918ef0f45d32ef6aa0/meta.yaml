@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/0a76efbb4f254c918ef0f45d32ef6aa0/artifacts
+end_time: 1753360631476
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 0a76efbb4f254c918ef0f45d32ef6aa0
+run_name: charming-cod-238
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753360630945
+status: 3
+tags: []
+user_id: David.Njuguna

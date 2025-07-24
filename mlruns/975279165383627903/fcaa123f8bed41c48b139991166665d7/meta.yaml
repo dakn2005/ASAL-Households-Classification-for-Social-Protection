@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/fcaa123f8bed41c48b139991166665d7/artifacts
+end_time: 1753359883659
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: fcaa123f8bed41c48b139991166665d7
+run_name: zealous-dog-206
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359883388
+status: 3
+tags: []
+user_id: David.Njuguna

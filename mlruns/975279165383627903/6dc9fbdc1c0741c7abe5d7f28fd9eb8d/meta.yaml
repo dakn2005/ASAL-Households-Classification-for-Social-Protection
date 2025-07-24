@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/6dc9fbdc1c0741c7abe5d7f28fd9eb8d/artifacts
+deleted_time: 1753358676663
+end_time: 1753358510369
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: deleted
+run_id: 6dc9fbdc1c0741c7abe5d7f28fd9eb8d
+run_name: awesome-sloth-13
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753358510090
+status: 3
+tags: []
+user_id: David.Njuguna

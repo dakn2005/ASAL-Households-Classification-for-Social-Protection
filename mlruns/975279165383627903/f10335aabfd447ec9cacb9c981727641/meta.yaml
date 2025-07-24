@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/f10335aabfd447ec9cacb9c981727641/artifacts
+end_time: 1753359931867
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: f10335aabfd447ec9cacb9c981727641
+run_name: charming-snail-653
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753359931484
+status: 3
+tags: []
+user_id: David.Njuguna
