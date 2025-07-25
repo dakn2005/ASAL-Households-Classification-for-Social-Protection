@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/b215d16e3ed847b19bdbf9ad2c9d316e/artifacts
+end_time: 1753379050128
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: b215d16e3ed847b19bdbf9ad2c9d316e
+run_name: fortunate-calf-153
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753379049767
+status: 3
+tags: []
+user_id: David.Njuguna

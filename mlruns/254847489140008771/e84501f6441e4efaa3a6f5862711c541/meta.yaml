@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/e84501f6441e4efaa3a6f5862711c541/artifacts
+end_time: 1753377004006
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: e84501f6441e4efaa3a6f5862711c541
+run_name: delicate-stoat-664
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753377003748
+status: 3
+tags: []
+user_id: David.Njuguna

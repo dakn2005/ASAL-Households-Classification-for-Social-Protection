@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/3dd1605aeeb14971a5bc31f8cc3cefd3/artifacts
+end_time: 1753386263108
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 3dd1605aeeb14971a5bc31f8cc3cefd3
+run_name: nebulous-vole-171
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753386254502
+status: 3
+tags: []
+user_id: David.Njuguna

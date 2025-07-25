@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/afbc600909d0426c9242a773f3caa553/artifacts
+end_time: 1753382194373
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: afbc600909d0426c9242a773f3caa553
+run_name: gregarious-steed-254
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753382193712
+status: 3
+tags: []
+user_id: David.Njuguna

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/ab1ed3de4346423a91f474f18ada38ce/artifacts
+deleted_time: 1753381759402
+end_time: 1753381687575
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: deleted
+run_id: ab1ed3de4346423a91f474f18ada38ce
+run_name: vaunted-sloth-500
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753381687243
+status: 3
+tags: []
+user_id: David.Njuguna

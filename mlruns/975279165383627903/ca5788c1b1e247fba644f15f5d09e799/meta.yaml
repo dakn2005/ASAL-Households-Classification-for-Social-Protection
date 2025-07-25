@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/ca5788c1b1e247fba644f15f5d09e799/artifacts
+end_time: 1753378606048
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: ca5788c1b1e247fba644f15f5d09e799
+run_name: victorious-zebra-66
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753378605552
+status: 3
+tags: []
+user_id: David.Njuguna

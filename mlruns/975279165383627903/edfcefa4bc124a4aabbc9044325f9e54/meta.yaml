@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/edfcefa4bc124a4aabbc9044325f9e54/artifacts
+end_time: 1753377038307
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: edfcefa4bc124a4aabbc9044325f9e54
+run_name: debonair-trout-200
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753377037967
+status: 3
+tags: []
+user_id: David.Njuguna

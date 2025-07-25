@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/f3a92d2f8d074f55a5d9931f2c0d4889/artifacts
+end_time: 1753382464213
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: f3a92d2f8d074f55a5d9931f2c0d4889
+run_name: useful-seal-395
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753382463581
+status: 3
+tags: []
+user_id: David.Njuguna

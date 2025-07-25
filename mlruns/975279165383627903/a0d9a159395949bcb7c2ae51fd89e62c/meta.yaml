@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/a0d9a159395949bcb7c2ae51fd89e62c/artifacts
+end_time: 1753375597605
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: a0d9a159395949bcb7c2ae51fd89e62c
+run_name: charming-zebra-644
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753375597106
+status: 3
+tags: []
+user_id: David.Njuguna

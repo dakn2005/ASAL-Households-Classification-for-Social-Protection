@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/a9c7303deb014b2093a4b32a9af5f697/artifacts
+end_time: 1753382391864
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: a9c7303deb014b2093a4b32a9af5f697
+run_name: angry-grouse-32
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753382391494
+status: 3
+tags: []
+user_id: David.Njuguna

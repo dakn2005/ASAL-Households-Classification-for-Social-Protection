@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/485b5e9447dc48e38accb8df27272078/artifacts
+end_time: 1753381434697
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 485b5e9447dc48e38accb8df27272078
+run_name: placid-shrimp-673
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753381433947
+status: 3
+tags: []
+user_id: David.Njuguna

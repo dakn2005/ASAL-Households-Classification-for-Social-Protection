@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/33f70b6ba3f3451fad793eacf3ab99cd/artifacts
+end_time: 1753381744037
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 33f70b6ba3f3451fad793eacf3ab99cd
+run_name: handsome-robin-342
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753381743776
+status: 3
+tags: []
+user_id: David.Njuguna

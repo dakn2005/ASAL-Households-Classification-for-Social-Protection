@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/adfef80693c34a0d9489c37fb01bbfbc/artifacts
+end_time: 1753382131161
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: adfef80693c34a0d9489c37fb01bbfbc
+run_name: loud-auk-554
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753382130858
+status: 3
+tags: []
+user_id: David.Njuguna

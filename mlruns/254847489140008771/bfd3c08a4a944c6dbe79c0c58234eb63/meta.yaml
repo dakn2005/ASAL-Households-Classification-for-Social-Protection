@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/bfd3c08a4a944c6dbe79c0c58234eb63/artifacts
+end_time: 1753384987383
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: bfd3c08a4a944c6dbe79c0c58234eb63
+run_name: likeable-trout-844
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753384986954
+status: 4
+tags: []
+user_id: David.Njuguna

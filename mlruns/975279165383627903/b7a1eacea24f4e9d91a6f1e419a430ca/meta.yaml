@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/b7a1eacea24f4e9d91a6f1e419a430ca/artifacts
+end_time: 1753376270657
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: b7a1eacea24f4e9d91a6f1e419a430ca
+run_name: enthused-rat-196
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753376270182
+status: 3
+tags: []
+user_id: David.Njuguna

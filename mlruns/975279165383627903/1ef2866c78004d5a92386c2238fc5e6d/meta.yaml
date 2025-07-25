@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/1ef2866c78004d5a92386c2238fc5e6d/artifacts
+end_time: 1753378659557
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 1ef2866c78004d5a92386c2238fc5e6d
+run_name: learned-pug-675
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753378659259
+status: 3
+tags: []
+user_id: David.Njuguna

@@ -4,3 +4,4 @@ data/features_final.csv
 data/X_train.csv
 .venv
 __pycache__
+*.png

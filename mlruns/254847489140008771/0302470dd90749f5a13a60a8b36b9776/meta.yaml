@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/0302470dd90749f5a13a60a8b36b9776/artifacts
+end_time: 1753385074198
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 0302470dd90749f5a13a60a8b36b9776
+run_name: rogue-wren-74
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753385033091
+status: 3
+tags: []
+user_id: David.Njuguna

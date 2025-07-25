@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/e213aa5ed3654e878083b951f4db514f/artifacts
+end_time: 1753378425687
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: e213aa5ed3654e878083b951f4db514f
+run_name: bald-fish-681
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753378425391
+status: 3
+tags: []
+user_id: David.Njuguna
