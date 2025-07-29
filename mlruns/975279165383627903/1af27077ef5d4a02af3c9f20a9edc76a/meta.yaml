@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/1af27077ef5d4a02af3c9f20a9edc76a/artifacts
+end_time: 1753805960104
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 1af27077ef5d4a02af3c9f20a9edc76a
+run_name: bright-pig-336
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753805949131
+status: 3
+tags: []
+user_id: David.Njuguna

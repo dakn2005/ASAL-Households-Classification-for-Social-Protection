@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/700e81f2683e427b89c8b684d25280e9/artifacts
+end_time: 1753799744777
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 700e81f2683e427b89c8b684d25280e9
+run_name: victorious-ant-804
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753799734650
+status: 3
+tags: []
+user_id: David.Njuguna

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/f11c4072bc3047c293753f2e6c9c92ed/artifacts
+end_time: 1753807364950
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: f11c4072bc3047c293753f2e6c9c92ed
+run_name: worried-seal-872
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753807353267
+status: 3
+tags: []
+user_id: David.Njuguna

@@ -2,6 +2,7 @@
 data/hsnp-asal-nk-data.xlsx
 data/features_final.csv
 data/X_train.csv
+data/lime_outputs/
 .venv
 __pycache__
 *.png

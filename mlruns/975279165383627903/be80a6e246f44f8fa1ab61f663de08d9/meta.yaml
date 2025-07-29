@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/be80a6e246f44f8fa1ab61f663de08d9/artifacts
+deleted_time: 1753802658253
+end_time: 1753802124245
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: deleted
+run_id: be80a6e246f44f8fa1ab61f663de08d9
+run_name: gaudy-smelt-221
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753802109894
+status: 3
+tags: []
+user_id: David.Njuguna

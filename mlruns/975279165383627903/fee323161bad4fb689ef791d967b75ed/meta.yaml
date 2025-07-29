@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/fee323161bad4fb689ef791d967b75ed/artifacts
+end_time: 1753806949010
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: fee323161bad4fb689ef791d967b75ed
+run_name: monumental-gnu-507
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753806936299
+status: 3
+tags: []
+user_id: David.Njuguna

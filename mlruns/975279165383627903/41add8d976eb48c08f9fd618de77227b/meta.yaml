@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/41add8d976eb48c08f9fd618de77227b/artifacts
+end_time: 1753804617449
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 41add8d976eb48c08f9fd618de77227b
+run_name: spiffy-eel-874
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753804579210
+status: 3
+tags: []
+user_id: David.Njuguna

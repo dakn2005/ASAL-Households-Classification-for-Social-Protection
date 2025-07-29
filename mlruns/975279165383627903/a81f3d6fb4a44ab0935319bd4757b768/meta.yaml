@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/a81f3d6fb4a44ab0935319bd4757b768/artifacts
+end_time: 1753807388669
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: a81f3d6fb4a44ab0935319bd4757b768
+run_name: fortunate-stoat-147
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753807378124
+status: 3
+tags: []
+user_id: David.Njuguna

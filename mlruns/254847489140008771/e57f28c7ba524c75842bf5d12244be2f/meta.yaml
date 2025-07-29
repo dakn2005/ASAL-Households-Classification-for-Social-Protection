@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/e57f28c7ba524c75842bf5d12244be2f/artifacts
+end_time: 1753806902210
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: e57f28c7ba524c75842bf5d12244be2f
+run_name: sneaky-carp-976
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753806887258
+status: 3
+tags: []
+user_id: David.Njuguna

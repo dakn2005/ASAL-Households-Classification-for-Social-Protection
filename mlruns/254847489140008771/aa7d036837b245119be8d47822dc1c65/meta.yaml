@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/aa7d036837b245119be8d47822dc1c65/artifacts
+end_time: 1753797139715
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: aa7d036837b245119be8d47822dc1c65
+run_name: melodic-eel-533
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753797133774
+status: 3
+tags: []
+user_id: David.Njuguna

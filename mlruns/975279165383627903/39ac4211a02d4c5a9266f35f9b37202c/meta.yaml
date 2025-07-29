@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/39ac4211a02d4c5a9266f35f9b37202c/artifacts
+end_time: 1753802894026
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: active
+run_id: 39ac4211a02d4c5a9266f35f9b37202c
+run_name: painted-squirrel-444
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753802883190
+status: 3
+tags: []
+user_id: David.Njuguna

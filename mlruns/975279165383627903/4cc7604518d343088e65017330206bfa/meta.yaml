@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/975279165383627903/4cc7604518d343088e65017330206bfa/artifacts
+deleted_time: 1753802658260
+end_time: 1753802490001
+entry_point_name: ''
+experiment_id: '975279165383627903'
+lifecycle_stage: deleted
+run_id: 4cc7604518d343088e65017330206bfa
+run_name: aged-bass-8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753802479959
+status: 3
+tags: []
+user_id: David.Njuguna

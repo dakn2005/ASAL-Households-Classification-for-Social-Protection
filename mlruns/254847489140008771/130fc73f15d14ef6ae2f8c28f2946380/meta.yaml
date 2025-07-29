@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/130fc73f15d14ef6ae2f8c28f2946380/artifacts
+end_time: 1753805910953
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 130fc73f15d14ef6ae2f8c28f2946380
+run_name: clumsy-vole-612
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753805897777
+status: 3
+tags: []
+user_id: David.Njuguna
