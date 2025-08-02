@@ -3,7 +3,7 @@
 ### Table of contents
 
 <!-- - [Household Classification for Social Protection](#household-classification-for-social-protection) -->
-- [Household Classification for Social Protection](#household-classification-for-social-protection)
+- [Household Classification for Disaster Response](#household-classification-for-disaster-response)
     - [Table of contents](#table-of-contents)
     - [Introduction](#introduction)
     - [Problem Statement](#problem-statement)
@@ -166,8 +166,6 @@ Follow the steps below to integrate LLM Model in Bigquery
 ## Data Pipeline
 The pipelines ran 2 **Batch** jobs periodically. The pipeline architecture is as below:
 
-![landing page](public/IaC.png)
-
 The steps employed are:
   -  Extract (get data from source, in this case the [planecrashinfo](https://www.planecrashinfo.com/) website)
   - Load - convert data from the website into CSVs -> this is then saved in a bucket on Google Cloud Storage -> which is then loaded into an external table
@@ -177,13 +175,5 @@ The steps employed are:
 I use Kestra for Orchestration of the batch jobs; Orchestration is the process of bringing together disparate activities into a continuous workflow, normally given the monicker 'flow'.
 
 - Plane Incidents flow - Gets data from the web into a CSV file on gcs bucket
-
-![plane incidents flow](public/flow_extract.png)
-
-- Sentiments flow - populates the ml_classification column using summary text classified by gemini LLM
-
-![sentiments flow](public/flow_sentiment%20analysis.png)
-
-
 
 ## Conclusion

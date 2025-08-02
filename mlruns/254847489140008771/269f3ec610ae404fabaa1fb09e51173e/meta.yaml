@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/269f3ec610ae404fabaa1fb09e51173e/artifacts
+end_time: 1753956596777
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 269f3ec610ae404fabaa1fb09e51173e
+run_name: adorable-stag-622
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753956584205
+status: 3
+tags: []
+user_id: David.Njuguna

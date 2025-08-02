@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/1a1174a60f7e49b3b635b558ec667274/artifacts
+end_time: 1753939653186
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 1a1174a60f7e49b3b635b558ec667274
+run_name: smiling-crane-333
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753939607673
+status: 3
+tags: []
+user_id: David.Njuguna
