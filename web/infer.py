@@ -7,6 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from fastapi import FastAPI
 from pydantic import BaseModel
+import mlflow
 
 app = FastAPI()
 
@@ -58,22 +59,35 @@ def infer(data: List[Record]):
         df, t, test_size=0, random_state=0
     )
 
-    # get run
-    
+    # get run - load model
+    MLFLOW_TRACKING_URI = "http://127.0.0.1:5000"
+    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+    model_name = "asal_xgb_model"
+
+    model = mlflow.xgboost.load_model(
+        f"models:/{model_name}"
+    )
 
     # predict
+    pred = model.predict(X)
 
-    return {"message": "Hello World"}
+    return {
+        "results": pred,
+        "target": y
+    }
 
 def preprocess(df) -> Tuple[Series, DataFrame]:
-    t, df = drop_transform_str(df)
+    t, df = transform(df)
     df = normalization(df)
     df = one_hot(df)
     df = bool_convert(df)
 
     return t, df
 
-def drop_transform_str(df) -> Tuple[Series, DataFrame]:
+def transform(df) -> Tuple[Series, DataFrame]:
+    # remap labels
+    df['Wealthgroup_Name'] = df['Wealthgroup_Name'].replace(['Better Off', 'Middle', 'Poor', 'Very Poor'], [0,1,2,3])
+
     bool_cols = [
         "recipient_of_wfp",
         "OPCT_received",
@@ -83,6 +97,7 @@ def drop_transform_str(df) -> Tuple[Series, DataFrame]:
     
     df[bool_cols] = df[bool_cols].applymap(lambda x: x == 1)
 
+    # resident provider has categorical values representes as numbers
     df["Resident_Provider"] = df["Resident_Provider"].astype(str)
 
     # drop target label and features with non-trivial missing data
