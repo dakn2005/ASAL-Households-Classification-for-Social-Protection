@@ -1,12 +1,8 @@
 # Household Classification for Social Protection
 
 ### Table of contents
-
-<!-- - [Household Classification for Social Protection](#household-classification-for-social-protection) -->
-- [Household Classification for Social Protection](#household-classification-for-social-protection)
-    - [Table of contents](#table-of-contents)
-    - [Introduction](#introduction)
-    - [Problem Statement](#problem-statement)
+  - [Introduction](#introduction)
+  - [Problem Statement](#problem-statement)
   - [Objective](#objective)
     - [Data Sources](#data-sources)
       - [Data (Schema)](#data-schema)
