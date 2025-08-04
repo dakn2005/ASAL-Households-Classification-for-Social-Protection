@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/e9c103d5458b4b3b9579744859fff1c5/artifacts
+deleted_time: 1754294618881
 end_time: 1753385756477
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: e9c103d5458b4b3b9579744859fff1c5
 run_name: zealous-wren-610
 source_name: ''

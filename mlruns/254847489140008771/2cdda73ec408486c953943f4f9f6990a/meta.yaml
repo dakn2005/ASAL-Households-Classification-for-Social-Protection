@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/2cdda73ec408486c953943f4f9f6990a/artifacts
+deleted_time: 1754294600558
 end_time: 1753357041559
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 2cdda73ec408486c953943f4f9f6990a
 run_name: abrasive-asp-629
 source_name: ''

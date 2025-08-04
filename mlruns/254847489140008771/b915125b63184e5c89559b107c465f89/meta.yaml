@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/b915125b63184e5c89559b107c465f89/artifacts
+deleted_time: 1754294600225
 end_time: 1753286584489
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: b915125b63184e5c89559b107c465f89
 run_name: omniscient-frog-395
 source_name: ''

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/ac1937ef98ee482faa3c6e881fff2724/artifacts
+end_time: 1754293920993
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: ac1937ef98ee482faa3c6e881fff2724
+run_name: big-asp-189
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754293897804
+status: 3
+tags: []
+user_id: David.Njuguna

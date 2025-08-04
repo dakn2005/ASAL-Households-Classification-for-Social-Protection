@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/db4b40d568564874bf6b6c5810c706b6/artifacts
+deleted_time: 1754294600515
 end_time: 1753293007584
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: db4b40d568564874bf6b6c5810c706b6
 run_name: monumental-shrike-81
 source_name: ''

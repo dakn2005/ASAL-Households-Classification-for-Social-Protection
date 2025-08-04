@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/18aed8ba6ff4450586af7cbffe367702/artifacts
+deleted_time: 1754294600693
 end_time: 1753354221168
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 18aed8ba6ff4450586af7cbffe367702
 run_name: suave-snake-689
 source_name: ''

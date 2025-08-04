@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/33524e3feefa4394a38d156411cc6688/artifacts
+deleted_time: 1754294618899
 end_time: 1753385239699
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 33524e3feefa4394a38d156411cc6688
 run_name: magnificent-ray-812
 source_name: ''

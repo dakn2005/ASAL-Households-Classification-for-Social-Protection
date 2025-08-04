@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from fastapi import FastAPI
 from pydantic import BaseModel
 import mlflow
+from mlflow.tracking import MlflowClient
 
 app = FastAPI()
 
@@ -52,28 +53,36 @@ def test(id: Optional[int] = None):
 
 @app.post("/predict")
 def infer(data: List[Record]):
-    dt = pd.json_normalize(data)
+    data_json = [datum.dict() for datum in data]
+    dt = pd.json_normalize(data_json)
+
+    # dt = pd.read_csv("C:\\Users\\david.njuguna\\Desktop\\Davi Pers Projects\\DE\\ASAL-Households-Classification-for-Social-Protection\\data\\output-refined-ann.csv")
+
     t,df = preprocess(dt)
 
-    X, y, _, _ = train_test_split(
-        df, t, test_size=0, random_state=0
-    )
+    X, y = df, t
 
     # get run - load model
     MLFLOW_TRACKING_URI = "http://127.0.0.1:5000"
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
-    model_name = "asal_xgb_model"
+    model_name = "asal_xgb_model_20250804_3"
+    model_v = 1
 
     model = mlflow.xgboost.load_model(
-        f"models:/{model_name}"
+        model_uri = f"models:/{model_name}/{model_v}"
     )
+
+    # reformat featurename
+    # https://stackoverflow.com/questions/42338972/valueerror-feature-names-mismatch-in-xgboost-in-the-predict-function
+    cols_when_model_builds = model.get_booster().feature_names
+    X = X[cols_when_model_builds]
 
     # predict
     pred = model.predict(X)
 
     return {
-        "results": pred,
-        "target": y
+        "pred": np.array(pred).tolist(),
+        "target": np.array(y).tolist()
     }
 
 def preprocess(df) -> Tuple[Series, DataFrame]:
@@ -81,8 +90,22 @@ def preprocess(df) -> Tuple[Series, DataFrame]:
     df = normalization(df)
     df = one_hot(df)
     df = bool_convert(df)
+    df = fill_missing_cols(df)
 
     return t, df
+
+def fill_missing_cols(df: DataFrame) -> DataFrame:
+    MLFLOW_TRACKING_URI = "http://127.0.0.1:5000"
+    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+    artifact: dict = mlflow.artifacts.load_dict("mlflow-artifacts:/254847489140008771/658e9234604c4598a529382521e8f24f/artifacts/col_set.json")
+    artifact_cols = artifact.keys()
+    dfCols = df.columns
+
+    for col in artifact_cols:
+        if col not in dfCols:
+            df[col] = 0
+
+    return df
 
 def transform(df) -> Tuple[Series, DataFrame]:
     # remap labels
@@ -146,6 +169,8 @@ def normalization(df) -> DataFrame:
     features_minmax_transform = pd.DataFrame(data=df)
     # display(features_log_minmax_transform[:1])
     features_minmax_transform[numerical] = scaler.fit_transform(df[numerical])
+
+    return features_minmax_transform
 
 def one_hot(df) -> DataFrame:
     return pd.get_dummies(df)

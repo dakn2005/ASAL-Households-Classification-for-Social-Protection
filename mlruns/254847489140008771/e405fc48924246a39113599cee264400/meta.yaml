@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/e405fc48924246a39113599cee264400/artifacts
+deleted_time: 1754294618866
 end_time: 1753386228847
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: e405fc48924246a39113599cee264400
 run_name: shivering-midge-696
 source_name: ''

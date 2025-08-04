@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/0e79533e45d540c5b5e39a599ca3bbf9/artifacts
+deleted_time: 1754294600157
 end_time: 1753378376508
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 0e79533e45d540c5b5e39a599ca3bbf9
 run_name: tasteful-ape-67
 source_name: ''

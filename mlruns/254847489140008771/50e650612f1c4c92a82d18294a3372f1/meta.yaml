@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/50e650612f1c4c92a82d18294a3372f1/artifacts
+deleted_time: 1754294600353
 end_time: 1753288794353
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 50e650612f1c4c92a82d18294a3372f1
 run_name: upset-horse-209
 source_name: ''

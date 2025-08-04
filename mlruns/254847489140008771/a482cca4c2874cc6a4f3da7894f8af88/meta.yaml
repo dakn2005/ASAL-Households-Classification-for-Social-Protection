@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/a482cca4c2874cc6a4f3da7894f8af88/artifacts
+end_time: 1754289141608
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: a482cca4c2874cc6a4f3da7894f8af88
+run_name: bouncy-ant-501
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754289121661
+status: 3
+tags: []
+user_id: David.Njuguna

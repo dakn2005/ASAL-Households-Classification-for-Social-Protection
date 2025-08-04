@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/5b4d6c3f7174442cb5cd659f3b35b75b/artifacts
+deleted_time: 1754294600473
 end_time: 1753292669776
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 5b4d6c3f7174442cb5cd659f3b35b75b
 run_name: hilarious-wasp-335
 source_name: ''

@@ -1,6 +1,11 @@
 version: '3'
 services:
-  web:
-    build: .
+  asal-web-prod:
+    container_name: asal-web
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8002:8000"
+    # restart: always

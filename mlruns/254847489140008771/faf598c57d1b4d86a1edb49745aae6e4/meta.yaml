@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/faf598c57d1b4d86a1edb49745aae6e4/artifacts
+deleted_time: 1754294600045
 end_time: 1753382661536
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: faf598c57d1b4d86a1edb49745aae6e4
 run_name: treasured-foal-217
 source_name: ''

@@ -3,7 +3,7 @@
 ### Table of contents
 
 <!-- - [Household Classification for Social Protection](#household-classification-for-social-protection) -->
-- [Household Classification for Disaster Response](#household-classification-for-disaster-response)
+- [Household Classification for Social Protection](#household-classification-for-social-protection)
     - [Table of contents](#table-of-contents)
     - [Introduction](#introduction)
     - [Problem Statement](#problem-statement)
@@ -12,9 +12,13 @@
       - [Data (Schema)](#data-schema)
     - [Technologies](#technologies)
   - [Reproducability](#reproducability)
-  - [Data Pipeline](#data-pipeline)
-    - [Data Ingestion](#data-ingestion)
+  - [Workflow](#workflow)
+    - [Setup](#setup)
+    - [Run mlflow (Experiment Tracking and Model registrar)](#run-mlflow-experiment-tracking-and-model-registrar)
+    - [Run MageAI](#run-mageai)
+    - [Go Live!](#go-live)
   - [Conclusion](#conclusion)
+  - [Acknowledgments](#acknowledgments)
 
 ---
 ---
@@ -34,20 +38,56 @@ Use Machine Learning Operations (MLOPs) methodologies to operationalize househol
 3. model metrics from evidently
 
 ### Data Sources
+The annymized data can be requested via the [hsnp website](https://www.hsnp.or.ke) > data-form page
 
-
+Data used in this project is accessible from github via [this link](https://raw.githubusercontent.com/dakn2005/ASAL-Households-Classification-for-Social-Protection/refs/heads/main/data/output-refined-ann.csv?raw=True)
 #### Data (Schema)
 The data contains the fields below:
-
+```
+  RowID
+  Division_Name
+  Location_Name
+  Sublocation_Name
+  Village_Name
+  Wealthgroup_Name
+  PMT_Score
+  Resident_Provider
+  Polygamous
+  Kids_Under_15_In_Settlement
+  Children_Under_15_outside_settlement
+  Spouses_on_settlement
+  Spouses_Outside_HH
+  IsBeneficiaryHH
+  recipient_of_wfp
+  recipient_of_hsnp
+  OPCT_received
+  PWSDCT_received
+  Relationship_MainProvider
+  Gender
+  Age
+  School_meal_receive
+  Work_last_7days
+  Main_provider_occupation
+  Toilet
+  Drinking_water
+  Donkeys_owned
+  Camels_owned
+  Zebu_cattle_owned
+  Shoats_owned
+  Nets_owned
+  Hooks_owned
+  Boats_rafts_owned
+```
 
 ### Technologies
 - Docker (containerization)
 - Terraform (infrastructure as code) - decided on using Terraform for tools uniformity
 - Mage
-- Google Cloud Storage (data lake)
+- Google Cloud Storage (data lake) - for model and data storage
 - MLFlow
 - Evidently
-- Pocketbase
+- FastAPI
+- Postgres
 
 ## Reproducability
 <details>
@@ -55,7 +95,7 @@ The data contains the fields below:
 
 - Follow the GCP instructions in setting up a project
 
-- We set up a service account to aide Kestra/Terraform/Other infrastructure tool in accessing the GCP platform.
+- We set up a service account to aide Terraform/Other infrastructure tool in accessing the GCP platform.
 
 - Configure the GCP service account by accessing I&M and Admin -> service accounts -> create service account. Add the required roles (Bigquery Admin, Compute Admin and Storage Admin)
 
@@ -64,116 +104,119 @@ The data contains the fields below:
 </details>
 
 <details>
-<summary>Kestra Setup</summary>
-Ensure to docker is setup and installed as per your operating system (ensure docker engine is installed). Follow the instructions [here](https://docs.docker.com/engine/install/).
-
-Go the [kestra website](https://kestra.io/docs/getting-started/quickstart#start-kestra) -> get Started -> goto the commands code.
-
-```
-docker run --pull=always --rm -it -p 8080:8080 --user=root -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp kestra/kestra:latest server local
-```
-
-Ensure to run the hello-world command to ensure docker is properly running
+<summary>Mage AI Setup</summary>
+Go to (my-mage-docker-quickstart)(https://github.com/dakn2005/my-mage-docker-quickstart). 
+Run the start.sh script with the below command
 
 ```
- sudo docker run hello-world
+./start.sh
 ```
 
 </details>
 
 <details>
-<summary>Infrastracture setup with Kestra</summary>
+<summary>Infrastracture setup with Terraform</summary>
 
 > Instead of using Terraform for this assignment, I preferred using a singular tool for the Infrastracture setup
 
-Setup kestra with the format below. This will be saved as a flow
+Setup Terraform with the format below. Ensure that the variables are filled in a variables.tf file
 
 ```
-id: 04_gcp_kv
-namespace: zoomcamp
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "6.18.0"
+    }
+  }
+}
 
-tasks:
-  - id: gcp_project_id
-    type: io.kestra.plugin.core.kv.Set
-    key: GCP_PROJECT_ID
-    kvType: STRING
-    value: [your project id] # unique project id
+provider "google" {
+  # Configuration options
+  # in the terminal export google credentials with your path to the key
+  project = "[your-project-name]"
+  region  = "[region e.g. us-central1]"
+}
 
-  - id: gcp_location
-    type: io.kestra.plugin.core.kv.Set
-    key: GCP_LOCATION
-    kvType: STRING
-    value: [location value e.g. US or us-central1]  #your preferred location
+resource "google_storage_bucket" "de-bucket" {
+  name          = var.gcs_bucket_name
+  location      = var.location
+  force_destroy = true
 
-  - id: gcp_bucket_name
-    type: io.kestra.plugin.core.kv.Set
-    key: GCP_BUCKET_NAME
-    kvType: STRING
-    value: [bucket name] # make sure it's globally unique!
+  lifecycle_rule {
+    condition {
+      age = 1
+    }
+    action {
+      type = "AbortIncompleteMultipartUpload"
+    }
+  }
+}
 
-  - id: gcp_dataset
-    type: io.kestra.plugin.core.kv.Set
-    key: GCP_DATASET
-    kvType: STRING
-    value: [dataset name e.g. zoomcamp]
+resource "google_bigquery_dataset" "de-dataset" {
+  dataset_id = var.bq_dataset_name
+  location = var.location
+}
 ```
 
-> ensure to set GCP_CREDS - the downloaded json key file from GCP setup
+> ensure to set GCP Credentials - the downloaded json key file from GCP setup
 > Go to Kestra -> Namespaces -> your namespace -> KV Store -> New Key-Value -> set the GCP_CREDS key (select JSON) -> copy-paste the json key
 
-Create another flow for setup
-
-```
-id: 05_gcp_setup
-namespace: zoomcamp
-
-tasks:
-  - id: create_gcs_bucket
-    type: io.kestra.plugin.gcp.gcs.CreateBucket
-    storageClass: REGIONAL
-    name: "{{kv('GCP_BUCKET_NAME')}}"
-    ifExists: SKIP
-
-  - id: create_bq_dataset
-    type: io.kestra.plugin.gcp.bigquery.CreateDataset
-    name: "{{kv('GCP_DATASET')}}"
-    ifExists: SKIP
-
-pluginDefaults:
-  - type: io.kestra.plugin.gcp
-    values:
-      serviceAccount: "{{kv('GCP_CREDS')}}"
-      projectId: "{{kv('GCP_PROJECT_ID')}}"
-      location: "{{kv('GCP_LOCATION')}}"
-      # bucket: "{{kv('GCP_BUCKET_NAME')}}"
-```
 
 </details>
 
-<details>
-<summary>Bigquery LLM setup</summary>
-Follow the steps below to integrate LLM Model in Bigquery
+## Workflow
+### Setup
+Using the make file, setup the infrastructure using the command below. This will create and provision the GCP bucket for data storage, and also artifact files from mlflow
+Using the Makefile, run the below command
 
-1. create an external connection: Go to Add Data -> search for vertex AI -> input connection ID; be cognizant of the Region as per your setup
-![LLM Setup](public/llm_setup.png)
+```
+make terraform
+```
 
-2.  Once setup, go to the connection, copy the service ID
-3.  Add a principle, with the Vertex AI user role, add the service ID as the New Principal's name
-4.  Add a model, described in [this document](Dev_Readme.md)
-5.  Follow the sample code from [this document](Dev_Readme.md)
-</details>
+This runs the commands
 
-## Data Pipeline
-The pipelines ran 2 **Batch** jobs periodically. The pipeline architecture is as below:
+```
+terraform init
+terraform apply
+```
 
-The steps employed are:
-  -  Extract (get data from source, in this case the [planecrashinfo](https://www.planecrashinfo.com/) website)
-  - Load - convert data from the website into CSVs -> this is then saved in a bucket on Google Cloud Storage -> which is then loaded into an external table
-  - Transform - convert into analytics views from the external table. The processes are described below in the [dbt cloud section](#transformation-using-dbt-cloud)
+You can view the proposed terraform plan using <kbd>terraform plan</kbd> command, below applying for infrastructure provisioning
 
-### Data Ingestion
-I use Kestra for Orchestration of the batch jobs; Orchestration is the process of bringing together disparate activities into a continuous workflow, normally given the monicker 'flow'.
+### Run mlflow (Experiment Tracking and Model registrar)
+Using the command below, ensure mlflow is running. This will track experiments, model performance, and store artifacts e.g. saved model, performance artifacts e.g. confusion matrix
 
-- Plane Incidents flow - Gets data from the web into a CSV file on gcs bucket
+```
+make mlflow-serve
+```
+
+### Run MageAI
+After mlflow is running, use the below command to run MageAI (ensure the mage folder was downloaded as per the instructions under [reproducability](#reproducability))
+
+```
+make mageai-start
+```
+
+This will activate the Machine learning pipelines for training of the model. Results are tracked by mlflow, and model are saved in a GCS bucket. 
+
+In mage we have the following pipelines:
+- Data preparation
+- XGBoost training
+- Retraining
+- Logging
+
+### Go Live!
+Run the make command to execute a web-service built with FastAPI and containerized in docker. The command run <kbd>docker compose up</kbd> command in the chosen infrastructure (EC2, Linode etc) 
+
+```
+make web-service-start
+```
 
 ## Conclusion
+
+## Acknowledgments
+This project was made possible thanks to:
+- DataTalks.Club for the excellent MLOps Zoomcamp course facilitated Alexey Grigorev and the course instructors 
+- MLOps Zoomcamp community for support, discussions, and shared learning experiences
+
+We can connect on [my github](https://github.com/dakn2005)

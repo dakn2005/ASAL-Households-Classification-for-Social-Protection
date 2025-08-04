@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/254847489140008771/aab0b899538148f08e15e5de2ae3f05a/artifacts
+deleted_time: 1754294600199
 end_time: 1753378107611
 entry_point_name: ''
 experiment_id: '254847489140008771'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: aab0b899538148f08e15e5de2ae3f05a
 run_name: spiffy-hen-346
 source_name: ''

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/e7a295af69644026a0e6e9eaa51e721c/artifacts
+end_time: 1754289019985
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: e7a295af69644026a0e6e9eaa51e721c
+run_name: judicious-snail-218
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754288995212
+status: 3
+tags: []
+user_id: David.Njuguna
