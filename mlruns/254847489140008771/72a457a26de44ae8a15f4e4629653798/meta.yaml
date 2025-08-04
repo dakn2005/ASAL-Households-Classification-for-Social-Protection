@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/72a457a26de44ae8a15f4e4629653798/artifacts
+end_time: 1753367572428
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: 72a457a26de44ae8a15f4e4629653798
+run_name: lyrical-doe-634
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753367572054
+status: 3
+tags: []
+user_id: daudi

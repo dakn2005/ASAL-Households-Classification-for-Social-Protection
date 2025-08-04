@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/254847489140008771/be2a7a17238e4e88be6250d6a64b8723/artifacts
+end_time: 1754332445953
+entry_point_name: ''
+experiment_id: '254847489140008771'
+lifecycle_stage: active
+run_id: be2a7a17238e4e88be6250d6a64b8723
+run_name: sincere-carp-153
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754332433180
+status: 3
+tags: []
+user_id: daudi

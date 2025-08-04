@@ -14,11 +14,12 @@
   - [Reproducability](#reproducability)
   - [Workflow](#workflow)
     - [Setup](#setup)
-    - [Run mlflow (Experiment Tracking and Model registrar)](#run-mlflow-experiment-tracking-and-model-registrar)
+    - [MLFlow (Experiment Tracking and Model registrar)](#mlflow-experiment-tracking-and-model-registrar)
     - [Run MageAI](#run-mageai)
     - [Go Live!](#go-live)
+  - [Explainability](#explainability)
   - [Conclusion](#conclusion)
-  - [Acknowledgments](#acknowledgments)
+  - [Acknowledgment](#acknowledgment)
 
 ---
 ---
@@ -28,17 +29,23 @@ We'll be looking to develop a classification model to aide in providing humanita
 
 We'll be using data from HSNP (Kenya), building a classification model and operationalizing it using learnings from [MLOPs Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp/tree/main)
 
+The [reference notebook](./ANN%20HH%20Scorer.ipynb) in this repo can be used for visibility into the working code. We can also setup the various tools as described in the [reproducability](#reproducability) and [workflow](#workflow) sections
+
 ### Problem Statement
 Create a production-ready classification model for easy household targeting using MLOPs methodologies
 
 ## Objective
-Use Machine Learning Operations (MLOPs) methodologies to operationalize household classification model. Some interesting insights will be:
+Use Machine Learning Operations (MLOPs) methodologies to operationalize household classification model. 
+
+The model classifies data into 4 classes representing economic tiers i.e. better off, middle, poor, very poor
+
+Some interesting insights will be:
 1. Feature engineering and analysis
 2. Accuracy metrics from model building using MlFlow (during training)
-3. model metrics from evidently
+3. model metrics using various visibility libbraries i.e. lime explainability
 
 ### Data Sources
-The annymized data can be requested via the [hsnp website](https://www.hsnp.or.ke) > data-form page
+The anonymized data can be requested via the [hsnp website](https://www.hsnp.or.ke) -> data-form page
 
 Data used in this project is accessible from github via [this link](https://raw.githubusercontent.com/dakn2005/ASAL-Households-Classification-for-Social-Protection/refs/heads/main/data/output-refined-ann.csv?raw=True)
 #### Data (Schema)
@@ -90,6 +97,13 @@ The data contains the fields below:
 - Postgres
 
 ## Reproducability
+
+<details>
+<summary>Makefile</summary>
+Using the makefile, we're able to organize and centralize commands for manageability. The project makefile provisions the mlops tools for infra, training, and web deployment
+
+</details>
+
 <details>
 <summary>GCP Setup</summary>
 
@@ -165,7 +179,9 @@ resource "google_bigquery_dataset" "de-dataset" {
 
 </details>
 
+
 ## Workflow
+![workflow](public/mlops-workflow.png)
 ### Setup
 Using the make file, setup the infrastructure using the command below. This will create and provision the GCP bucket for data storage, and also artifact files from mlflow
 Using the Makefile, run the below command
@@ -183,11 +199,62 @@ terraform apply
 
 You can view the proposed terraform plan using <kbd>terraform plan</kbd> command, below applying for infrastructure provisioning
 
-### Run mlflow (Experiment Tracking and Model registrar)
+### MLFlow (Experiment Tracking and Model registrar)
 Using the command below, ensure mlflow is running. This will track experiments, model performance, and store artifacts e.g. saved model, performance artifacts e.g. confusion matrix
 
 ```
 make mlflow-serve
+```
+
+On successful run, the following image will appear. 
+
+![mlflow screen](public/mlflow_1.png)
+
+To capture metrics,  call the mlflow client in the model training code.
+
+- set the tracking id
+```
+mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+```
+- Perform experiment tracking
+
+```
+with mlflow.start_run():
+    mlflow.set_tag("model", clf.__class__.__name__)
+  
+    mlflow.set_tag('cols', X_train.columns.tolist())
+    mlflow.log_params(clf.get_params())
+    mlflow.log_metrics({"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1, "log_loss": log_loss_value})
+    mlflow.log_artifact('xgb_cm_plot.png')
+    mlflow.log_artifact('col_set.json')
+    mlflow.xgboost.log_model(clf, "xgb_model")
+```
+
+- Model Registry
+```
+client = MlflowClient(tracking_uri=MLFLOW_TRACKING_URI)
+
+# XGBoost
+runs = client.search_runs(
+    experiment_ids='[experiment id]',
+    filter_string="metrics.accuracy > .6 and metrics.recall > .6",
+    run_view_type=ViewType.ACTIVE_ONLY,
+    max_results=5,
+    order_by=["attributes.start_time desc"]
+)
+
+for run in runs:
+    print("Run ID: {}, f1: {}".format(run.info.run_id, run.data.metrics['f1']))
+```
+
+- register an identified model
+```
+model_name = "asal_xgb_model_20250804_3"
+
+run_id = [run id]
+
+model_uri = f"runs:/{run_id}/[logged model]"
+mlflow.register_model(model_uri=model_uri, name=model_name)
 ```
 
 ### Run MageAI
@@ -201,22 +268,49 @@ This will activate the Machine learning pipelines for training of the model. Res
 
 In mage we have the following pipelines:
 - Data preparation
+
+![data prep](public/data_prep.png)
+
 - XGBoost training
+
+![model training](public/xgboost_training.png)
+
 - Retraining
-- Logging
+
+![retrain](public/retrain.png)
+
+- Logging via [mlflow](#mlflow-experiment-tracking-and-model-registrar)
+
+
 
 ### Go Live!
 Run the make command to execute a web-service built with FastAPI and containerized in docker. The command run <kbd>docker compose up</kbd> command in the chosen infrastructure (EC2, Linode etc) 
 
 ```
-make web-service-start
+make web-api-start
 ```
 
-## Conclusion
+Once the docker container is running, we are able to make a prediction, like the postman screenshot shown
 
-## Acknowledgments
+![postman](public/postman.png)
+
+## Explainability
+Using Local interpretable model-agnostic explanations (LIME), we are able to glimpse prediction at a single record level
+
+![rec1](public/rec1.png)
+![rec2](public/rec2.png)
+![rec3](public/rec3.png)
+
+We also track performance using confusion matrix, and saving this artifact per training (experiment)
+
+![confusion matrix](public/confusion_matrix.png)
+
+## Conclusion
+The model had moderate performance with accuracy, precision and recall of 0.6. We'ld need to enhance the training with more data-points (a larger dataset)
+
+One issue could be the reduced dataset after performing undersampling to ensure equal representation across the classes, and one way to mitigate this is having a much larger dataset, and running the retrain operation
+
+## Acknowledgment
 This project was made possible thanks to:
 - DataTalks.Club for the excellent MLOps Zoomcamp course facilitated Alexey Grigorev and the course instructors 
 - MLOps Zoomcamp community for support, discussions, and shared learning experiences
-
-We can connect on [my github](https://github.com/dakn2005)

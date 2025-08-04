@@ -9,6 +9,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import mlflow
 from mlflow.tracking import MlflowClient
+import uvicorn
 
 app = FastAPI()
 
@@ -182,4 +183,5 @@ def bool_convert(df) -> DataFrame:
 
     return df
 
-
+if __name__ == "__main__":
+    uvicorn.run("infer:app", host="0.0.0.0", port=8000)

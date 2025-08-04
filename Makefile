@@ -1,27 +1,23 @@
 terraform:
 	@echo "🚀 Initializing Terraform, create GCP resources"
-	cd terraform/
-	terraform init
-	terraform apply
+	cd terraform/ && terraform init && terraform apply
 
 terraform-destroy:
 	@echo "🗑️ Destroying resources..."
-	cd terraform/
-	terraform destroy
+	cd terraform/ && terraform destroy
 
 mageai-start:
 	@echo "🐳 Starting MageAI services..."
-	cd my-mage-docker-quickstart
-	./start.sh
+	cd my-mage-docker-quickstart && ./start.sh
 
-web-service-start:
+web-api-start:
 	@echo "🐳 Starting Docker services..."
-	docker compose up -d
+	cd web && docker compose up
 	@echo "⏳ Waiting for services to be ready..."
 	@sleep 10
 	
 
-web-service-stop:
+web-api-stop:
 	@echo "🐳 Stopping Docker services..."
 	docker compose down
 
